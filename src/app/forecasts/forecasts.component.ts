@@ -26,7 +26,8 @@ export class ForecastsComponent implements OnInit {
   }
 
   getCities(): void {
-    this.cities = this.cityService.getCities();
+    this.cityService.getCities()
+        .subscribe(cities => this.cities = cities);
   }
 
 }

@@ -1,4 +1,6 @@
 import { Injectable } from '@angular/core';
+import { Observable, of } from 'rxjs';
+
 import { City } from './city';
 import { CITIES } from './mock-cities';
 
@@ -6,8 +8,8 @@ import { CITIES } from './mock-cities';
   providedIn: 'root'
 })
 export class CityService {
-  getCities(): City[] {
-    return CITIES;
+  getCities(): Observable<City[]> {
+    return of(CITIES);
   }
 
   constructor() { }
