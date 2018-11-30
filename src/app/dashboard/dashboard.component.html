@@ -1,6 +1,7 @@
 <h3>Top Cities</h3>
 <div class="grid grid-pad">
-  <a *ngFor="let city of cities" class="col-1-4">
+  <a *ngFor="let city of cities" class="col-1-4"
+      routerLink="/detail/{{city.id}}" >
     <div class="module city">
       <h4>{{city.name}}</h4>
     </div>

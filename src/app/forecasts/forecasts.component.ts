@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Forecast } from '../forecast';
+// import { Forecast } from '../forecast';
 import { City } from '../city';
 import { CityService } from '../city.service';
 
@@ -9,10 +9,7 @@ import { CityService } from '../city.service';
   templateUrl: './forecasts.component.html',
   styleUrls: ['./forecasts.component.css']
 })
-export class ForecastsComponent implements OnInit {
-
-  selectedCity: City;
-  
+export class ForecastsComponent implements OnInit {  
   cities: City[];
   
   constructor(private cityService: CityService) { }
@@ -20,14 +17,10 @@ export class ForecastsComponent implements OnInit {
   ngOnInit() {
     this.getCities();
   }
-  
-  onSelect(city: City): void {
-    this.selectedCity = city;
-  }
 
   getCities(): void {
     this.cityService.getCities()
-        .subscribe(cities => this.cities = cities);
+    .subscribe(cities => this.cities = cities);
   }
 
 }
