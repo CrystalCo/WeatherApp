@@ -7,13 +7,15 @@ import { ForecastsComponent } from './forecasts/forecasts.component';
 import { CityDetailComponent } from './city-detail/city-detail.component';
 import { MessagesComponent } from './messages/messages.component';
 import { AppRoutingModule } from './app-routing.module';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ForecastsComponent,
     CityDetailComponent,
-    MessagesComponent
+    MessagesComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
