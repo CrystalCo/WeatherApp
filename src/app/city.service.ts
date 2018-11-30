@@ -3,14 +3,17 @@ import { Observable, of } from 'rxjs';
 
 import { City } from './city';
 import { CITIES } from './mock-cities';
+import { MessageService } from './message.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CityService {
   getCities(): Observable<City[]> {
+    // TODO: send the message _after_ fetching the cities
+  this.messageService.add('CityService: fetched cities');
     return of(CITIES);
   }
 
-  constructor() { }
+  constructor(private messageService: MessageService) { }
 }

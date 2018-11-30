@@ -5,12 +5,14 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { ForecastsComponent } from './forecasts/forecasts.component';
 import { CityDetailComponent } from './city-detail/city-detail.component';
+import { MessagesComponent } from './messages/messages.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ForecastsComponent,
-    CityDetailComponent
+    CityDetailComponent,
+    MessagesComponent
   ],
   imports: [
     BrowserModule,
