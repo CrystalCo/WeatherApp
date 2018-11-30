@@ -1,0 +1,15 @@
+<div *ngIf="city">
+
+    <h2>{{city.name | uppercase}} Forecast for {{day.name | uppercase}}</h2>
+    <div>
+      <label>city:
+        <input [(ngModel)]="city.name" placeholder="city">
+      </label>
+    </div>
+    <div><span>day: </span>{{day.name}}</div>
+    <div><span>Today's date: </span>{{day | date:"MM/dd/yy" }}</div>
+  
+    <h3>Forecast Details</h3>
+    <div><span>forecast: </span>{{forecast.name}}</div>
+  
+  </div>
