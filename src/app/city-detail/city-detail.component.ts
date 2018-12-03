@@ -33,4 +33,9 @@ export class CityDetailComponent implements OnInit {
     this.location.back();
   }
 
+  save(): void {
+    this.cityService.updateCity(this.city)
+    .subscribe(() => this.goBack());
+  }
+
 }

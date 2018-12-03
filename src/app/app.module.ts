@@ -13,6 +13,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService }  from './in-memory-data.service';
+import { CitySearchComponent } from './city-search/city-search.component';
 
 @NgModule({
   imports: [
@@ -34,6 +35,7 @@ import { InMemoryDataService }  from './in-memory-data.service';
     ForecastsComponent,
     CityDetailComponent,
     MessagesComponent,
+    CitySearchComponent,
   ],
   bootstrap: [AppComponent]
 })
