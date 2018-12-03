@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 
-// import { Forecast } from '../forecast';
 import { City } from '../city';
 import { CityService } from '../city.service';
 

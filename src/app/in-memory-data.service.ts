@@ -10,10 +10,10 @@ export class InMemoryDataService implements InMemoryDbService {
     const cities = [
       { id: 1000, name: 'Auckland' },
       { id: 2000, name: 'Belgrade' },
-      { id: 3000, name: 'Brisbane' },
+      { id: 3000, name: 'Chicago' },
       { id: 4000, name: 'Frankfurt' },
       { id: 5000, name: 'New Delhi' },
-      { id: 6000, name: 'Kings Landing' },
+      { id: 6000, name: 'Mexico City' },
       { id: 7000, name: 'Paris' },
       { id: 8000, name: 'Sao Paulo' },
       { id: 9000, name: 'Tokyo' },
@@ -28,6 +28,7 @@ export class InMemoryDataService implements InMemoryDbService {
   // if the cities array is not empty, the method below returns the highest
   // city id + 1.
   genId(cities: City[]): number {
-    return cities.length > 0 ? Math.max(...cities.map(city => city.id)) + 1000 : 10000;
+    return cities.length > 0 ? Math.max(...cities.map(city => 
+      city.id)) + 1000 : 10000;
   }
 }
